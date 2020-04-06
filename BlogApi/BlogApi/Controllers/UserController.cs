@@ -23,6 +23,23 @@ namespace BlogApi.Controllers
             "jana.novak@gmail.com", "marko.polo@gmail.com", "jan.zupan@gmail.com", "katarina.hrast@gmail.com"
         };
 
+        /*User users = new User
+        {
+            Id = "",
+            Username = "jananovak",
+            Email = "jana.novak@gmail.com",
+            isRegistered = true
+        };*/
+
+        List<User> users = new List<User>
+        {
+            new User{ Id = "1", Username = "jana.novak", Email = "jana.novak@gmail.com", isRegistered = true },
+            new User{ Id = "2", Username = "marko.polo", Email ="marko.polo@gmail.com", isRegistered = false, Address = "Slovenska ulica 5, Ljubljana" },
+            new User{ Id = "3", Username = "zupanjan", Email = "jan.zupan@gmail.com", isRegistered = true, Address = "Tomšičeva cesta 8, Kamnik" },
+            new User{ Id = "4", Username = "gregorcmeta", Email = "meta.gregorc@gmail.com", isRegistered = true },
+            new User{ Id = "5", Username = "katarinah", Email = "katarina.hrastnik@gmail.com", isRegistered = false }
+        };
+
         private readonly ILogger<UserController> _logger;
 
         public UserController(ILogger<UserController> logger)
@@ -33,22 +50,7 @@ namespace BlogApi.Controllers
         [HttpGet]
         public IEnumerable<User> Get()
         {
-            var random = new Random();
-
-            List<User> user = new List<User>();
-
-            for (int i = 0; i < 5; i++)
-            {
-                var newModel = new User
-                {
-                    Id = i + 1,
-                    Username = Usernames[random.Next(Usernames.Length)],
-                    Email = Emails[random.Next(Emails.Length)]
-                };
-                user.Add(newModel);
-            }
-
-            return user;
+            return this.users;
         }
 
         [HttpGet("{number}")]
@@ -60,11 +62,12 @@ namespace BlogApi.Controllers
 
             for (int i = 0; i < number; i++)
             {
+                var id = i + 1;
                 var newModel = new User
                 {
-                    Id = i + 1,
+                    Id = id.ToString(),
                     Username = Usernames[random.Next(Usernames.Length)],
-                    Email = Emails[random.Next(Emails.Length)]
+                    Email = Emails[random.Next(Emails.Length)],
                 };
                 user.Add(newModel);
             }

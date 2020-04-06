@@ -6072,11 +6072,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Karin\\Desktop\\github\\karinplaninsek\\BlogApi\\BlogApi\\BlogApi.csproj",
+      "projectUniqueName": "C:\\Users\\Karin\\Desktop\\blog\\BlogApi\\BlogApi\\BlogApi.csproj",
       "projectName": "BlogApi",
-      "projectPath": "C:\\Users\\Karin\\Desktop\\github\\karinplaninsek\\BlogApi\\BlogApi\\BlogApi.csproj",
+      "projectPath": "C:\\Users\\Karin\\Desktop\\blog\\BlogApi\\BlogApi\\BlogApi.csproj",
       "packagesPath": "C:\\Users\\Karin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Karin\\Desktop\\github\\karinplaninsek\\BlogApi\\BlogApi\\obj\\",
+      "outputPath": "C:\\Users\\Karin\\Desktop\\blog\\BlogApi\\BlogApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Karin\\AppData\\Roaming\\NuGet\\NuGet.Config",
