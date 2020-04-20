@@ -33,11 +33,11 @@ namespace BlogApi.Controllers
 
         List<User> users = new List<User>
         {
-            new User{ Id = "1", Username = "jana.novak", Email = "jana.novak@gmail.com", isRegistered = true },
-            new User{ Id = "2", Username = "marko.polo", Email ="marko.polo@gmail.com", isRegistered = false, Address = "Slovenska ulica 5, Ljubljana" },
-            new User{ Id = "3", Username = "zupanjan", Email = "jan.zupan@gmail.com", isRegistered = true, Address = "Tomšičeva cesta 8, Kamnik" },
-            new User{ Id = "4", Username = "gregorcmeta", Email = "meta.gregorc@gmail.com", isRegistered = true },
-            new User{ Id = "5", Username = "katarinah", Email = "katarina.hrastnik@gmail.com", isRegistered = false }
+            new User{ UserId = "1", Username = "jana.novak", Email = "jana.novak@gmail.com", isRegistered = true },
+            new User{ UserId = "2", Username = "marko.polo", Email ="marko.polo@gmail.com", isRegistered = false, Address = "Slovenska ulica 5, Ljubljana" },
+            new User{ UserId = "3", Username = "zupanjan", Email = "jan.zupan@gmail.com", isRegistered = true, Address = "Tomšičeva cesta 8, Kamnik" },
+            new User{ UserId = "4", Username = "gregorcmeta", Email = "meta.gregorc@gmail.com", isRegistered = true },
+            new User{ UserId = "5", Username = "katarinah", Email = "katarina.hrastnik@gmail.com", isRegistered = false }
         };
 
         private readonly ILogger<UserController> _logger;
@@ -65,7 +65,7 @@ namespace BlogApi.Controllers
                 var id = i + 1;
                 var newModel = new User
                 {
-                    Id = id.ToString(),
+                    UserId = id.ToString(),
                     Username = Usernames[random.Next(Usernames.Length)],
                     Email = Emails[random.Next(Emails.Length)],
                 };
